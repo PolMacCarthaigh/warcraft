@@ -16,7 +16,7 @@ require 'spec_helper'
   describe "damage" do
     it "damage buildings by 1/2" do
       @barracks.damage(5)
-      expect(@barracks.health_points).to eq(495) # starts at 500
+      expect(@barracks.health_points).to eq(495) 
     end
   end
   
