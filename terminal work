@@ -1,211 +1,16 @@
-vagrant [warcraft3]> bundle exec rspec spec/test_01.rb
-
 Footman
   has and knows its HP (health points)
   has and knows its AP (attack power)
 
-Finished in 0.00549 seconds (files took 0.23718 seconds to load)
-2 examples, 0 failures
-vagrant [warcraft3]> bundle exec rspec spec/test_02.rb
-
-Barracks
-  starts off with 1000 gold resources (FAILED - 1)
-  starts off with 80 food resources (FAILED - 2)
-
-Failures:
-
-  1) Barracks starts off with 1000 gold resources
-     Failure/Error: expect(@barracks.gold).to eq(1000)
-     NoMethodError:
-       undefined method `gold' for #<Barracks:0x8b50164>
-     # ./spec/test_02.rb:12:in `block (2 levels) in <top (required)>'
-
-  2) Barracks starts off with 80 food resources
-     Failure/Error: expect(@barracks.food).to eq(80)
-     NoMethodError:
-       undefined method `food' for #<Barracks:0x8b4659c>
-     # ./spec/test_02.rb:16:in `block (2 levels) in <top (required)>'
-
-Finished in 0.0022 seconds (files took 0.23079 seconds to load)
-2 examples, 2 failures
-
-Failed examples:
-
-rspec ./spec/test_02.rb:11 # Barracks starts off with 1000 gold resources
-rspec ./spec/test_02.rb:15 # Barracks starts off with 80 food resources
-vagrant [warcraft3]> bundle exec rspec spec/test_03.rb
-
-Barracks
-  #train_footman
-    costs 135 gold (FAILED - 1)
-    costs 2 food (FAILED - 2)
-    produces a footman unit (FAILED - 3)
-
-Failures:
-
-  1) Barracks#train_footman costs 135 gold
-     Failure/Error: @barracks.train_footman
-     NoMethodError:
-       undefined method `train_footman' for #<Barracks:0x9392688>
-     # ./spec/test_03.rb:15:in `block (3 levels) in <top (required)>'
-
-  2) Barracks#train_footman costs 2 food
-     Failure/Error: @barracks.train_footman
-     NoMethodError:
-       undefined method `train_footman' for #<Barracks:0x93917d8>
-     # ./spec/test_03.rb:20:in `block (3 levels) in <top (required)>'
-
-  3) Barracks#train_footman produces a footman unit
-     Failure/Error: footman = @barracks.train_footman
-     NoMethodError:
-       undefined method `train_footman' for #<Barracks:0x93906f8>
-     # ./spec/test_03.rb:25:in `block (3 levels) in <top (required)>'
-
-Finished in 0.00453 seconds (files took 0.23323 seconds to load)
-3 examples, 3 failures
-
-Failed examples:
-
-rspec ./spec/test_03.rb:14 # Barracks#train_footman costs 135 gold
-rspec ./spec/test_03.rb:19 # Barracks#train_footman costs 2 food
-rspec ./spec/test_03.rb:24 # Barracks#train_footman produces a footman unit
-vagrant [warcraft3]> bundle exec rspec spec/test_02.rb
-
-Barracks
-  starts off with 1000 gold resources (FAILED - 1)
-  starts off with 80 food resources (FAILED - 2)
-
-Failures:
-
-  1) Barracks starts off with 1000 gold resources
-     Failure/Error: expect(@barracks.gold).to eq(1000)
-       
-       expected: 1000
-            got: nil
-       
-       (compared using ==)
-     # ./spec/test_02.rb:12:in `block (2 levels) in <top (required)>'
-
-  2) Barracks starts off with 80 food resources
-     Failure/Error: expect(@barracks.food).to eq(80)
-       
-       expected: 80
-            got: nil
-       
-       (compared using ==)
-     # ./spec/test_02.rb:16:in `block (2 levels) in <top (required)>'
-
-Finished in 0.0032 seconds (files took 0.23078 seconds to load)
-2 examples, 2 failures
-
-Failed examples:
-
-rspec ./spec/test_02.rb:11 # Barracks starts off with 1000 gold resources
-rspec ./spec/test_02.rb:15 # Barracks starts off with 80 food resources
-vagrant [warcraft3]> bundle exec rspec spec/test_02.rb
-
-Barracks
-  starts off with 1000 gold resources (FAILED - 1)
-  starts off with 80 food resources (FAILED - 2)
-
-Failures:
-
-  1) Barracks starts off with 1000 gold resources
-     Failure/Error: expect(@barracks.gold).to eq(1000)
-       
-       expected: 1000
-            got: nil
-       
-       (compared using ==)
-     # ./spec/test_02.rb:12:in `block (2 levels) in <top (required)>'
-
-  2) Barracks starts off with 80 food resources
-     Failure/Error: expect(@barracks.food).to eq(80)
-       
-       expected: 80
-            got: nil
-       
-       (compared using ==)
-     # ./spec/test_02.rb:16:in `block (2 levels) in <top (required)>'
-
-Finished in 0.00485 seconds (files took 0.22793 seconds to load)
-2 examples, 2 failures
-
-Failed examples:
-
-rspec ./spec/test_02.rb:11 # Barracks starts off with 1000 gold resources
-rspec ./spec/test_02.rb:15 # Barracks starts off with 80 food resources
-vagrant [warcraft3]> bundle exec rspec spec/test_02.rb
-
 Barracks
   starts off with 1000 gold resources
   starts off with 80 food resources
-
-Finished in 0.00456 seconds (files took 0.22811 seconds to load)
-2 examples, 0 failures
-vagrant [warcraft3]> bundle exec rspec spec/test_03.rb
-
-Barracks
-  #train_footman
-    costs 135 gold (FAILED - 1)
-    costs 2 food (FAILED - 2)
-    produces a footman unit (FAILED - 3)
-
-Failures:
-
-  1) Barracks#train_footman costs 135 gold
-     Failure/Error: @barracks.train_footman
-     NoMethodError:
-       undefined method `train_footman' for #<Barracks:0x9ace348 @gold=1000, @food=80>
-     # ./spec/test_03.rb:15:in `block (3 levels) in <top (required)>'
-
-  2) Barracks#train_footman costs 2 food
-     Failure/Error: @barracks.train_footman
-     NoMethodError:
-       undefined method `train_footman' for #<Barracks:0x9acd45c @gold=1000, @food=80>
-     # ./spec/test_03.rb:20:in `block (3 levels) in <top (required)>'
-
-  3) Barracks#train_footman produces a footman unit
-     Failure/Error: footman = @barracks.train_footman
-     NoMethodError:
-       undefined method `train_footman' for #<Barracks:0x9acc430 @gold=1000, @food=80>
-     # ./spec/test_03.rb:25:in `block (3 levels) in <top (required)>'
-
-Finished in 0.00439 seconds (files took 0.23249 seconds to load)
-3 examples, 3 failures
-
-Failed examples:
-
-rspec ./spec/test_03.rb:14 # Barracks#train_footman costs 135 gold
-rspec ./spec/test_03.rb:19 # Barracks#train_footman costs 2 food
-rspec ./spec/test_03.rb:24 # Barracks#train_footman produces a footman unit
-vagrant [warcraft3]> bundle exec rspec spec/test_03.rb
-/usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `load': /vagrant/warcraft3/lib/barracks.rb:2: syntax error, unexpected ':', expecting keyword_end (SyntaxError)
- attr_reader :food :gold
-                    ^
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `block in load_spec_files'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `each'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `load_spec_files'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:96:in `setup'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:84:in `run'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:69:in `run'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:37:in `invoke'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/exe/rspec:4:in `<top (required)>'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/rspec:23:in `load'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/rspec:23:in `<main>'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `eval'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `<main>'
-vagrant [warcraft3]> bundle exec rspec spec/test_03.rb
 
 Barracks
   #train_footman
     costs 135 gold
     costs 2 food
     produces a footman unit
-
-Finished in 0.00842 seconds (files took 0.23526 seconds to load)
-3 examples, 0 failures
-vagrant [warcraft3]> bundle exec rspec spec/test_04.rb
 
 Barracks
   #can_train_footman?
@@ -216,39 +21,6 @@ Barracks
     does not train a footman if there aren't enough resources
     trains a footman if there are enough resources
 
-Finished in 0.01514 seconds (files took 0.23152 seconds to load)
-5 examples, 0 failures
-vagrant [warcraft3]> bundle exec rspec spec/test_05.rb
-/vagrant/warcraft3/spec/test_05.rb:10:in `<top (required)>': uninitialized constant Unit (NameError)
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `load'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `block in load_spec_files'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `each'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `load_spec_files'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:96:in `setup'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:84:in `run'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:69:in `run'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:37:in `invoke'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/exe/rspec:4:in `<top (required)>'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/rspec:23:in `load'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/rspec:23:in `<main>'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `eval'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `<main>'
-vagrant [warcraft3]> bundle exec rspec spec/test_05.rb
-/usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `load': /vagrant/warcraft3/lib/unit.rb:1: class/module name must be CONSTANT (SyntaxError)
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `block in load_spec_files'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `each'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `load_spec_files'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:96:in `setup'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:84:in `run'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:69:in `run'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:37:in `invoke'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/exe/rspec:4:in `<top (required)>'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/rspec:23:in `load'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/rspec:23:in `<main>'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `eval'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `<main>'
-vagrant [warcraft3]> bundle exec rspec spec/test_05.rb
-
 Unit
   initialization
     requires HP and AP instead of defaulting them
@@ -256,92 +28,8 @@ Unit
     can be retrieved (read)
     cannot be set (written) once initialized
 
-Finished in 0.00608 seconds (files took 0.23941 seconds to load)
-3 examples, 0 failures
-vagrant [warcraft3]> bundle exec rspec spec/test_06.rb
-
-Footman
-  should be a Unit (FAILED - 1)
-
-Failures:
-
-  1) Footman should be a Unit
-     Failure/Error: expect(@footman).to be_a(Unit)
-       expected #<Footman:0xa5273f8 @health_points=60, @attack_power=10> to be a kind of Unit
-     # ./spec/test_06.rb:17:in `block (2 levels) in <top (required)>'
-
-Finished in 0.00559 seconds (files took 0.23029 seconds to load)
-1 example, 1 failure
-
-Failed examples:
-
-rspec ./spec/test_06.rb:14 # Footman should be a Unit
-vagrant [warcraft3]> bundle exec rspec spec/test_06.rb
-
 Footman
   should be a Unit
-
-Finished in 0.00529 seconds (files took 0.23662 seconds to load)
-1 example, 0 failures
-vagrant [warcraft3]> bundle exec rspec spec/test_07.rb
-
-Footman
-  #attack!
-    should do deal 10 (AP) damage to the enemy unit (FAILED - 1)
-  #damage
-    should reduce the unit's health_points by the attack_power specified
-
-Failures:
-
-  1) Footman#attack! should do deal 10 (AP) damage to the enemy unit
-     Failure/Error: @footman.attack!(enemy)
-     NoMethodError:
-       super: no superclass method `attack!' for #<Footman:0xa544f84 @health_points=60, @attack_power=10>
-       Did you mean?  attack_power
-     # ./lib/footman.rb:15:in `attack!'
-     # ./spec/test_07.rb:16:in `block (3 levels) in <top (required)>'
-
-Finished in 0.0124 seconds (files took 0.23875 seconds to load)
-2 examples, 1 failure
-
-Failed examples:
-
-rspec ./spec/test_07.rb:13 # Footman#attack! should do deal 10 (AP) damage to the enemy unit
-vagrant [warcraft3]> bundle exec rspec spec/test_07.rb
-
-Footman
-  #attack!
-    should do deal 10 (AP) damage to the enemy unit (FAILED - 1)
-  #damage
-    should reduce the unit's health_points by the attack_power specified (FAILED - 2)
-
-Failures:
-
-  1) Footman#attack! should do deal 10 (AP) damage to the enemy unit
-     Failure/Error: @footman.attack!(enemy)
-     NoMethodError:
-       super: no superclass method `attack!' for #<Footman:0x9f1099c @health_points=60, @attack_power=10>
-       Did you mean?  attack_power
-     # ./lib/footman.rb:15:in `attack!'
-     # ./spec/test_07.rb:16:in `block (3 levels) in <top (required)>'
-
-  2) Footman#damage should reduce the unit's health_points by the attack_power specified
-     Failure/Error: expect(@footman.health_points).to eq(56) # starts at 60
-       
-       expected: 56
-            got: 60
-       
-       (compared using ==)
-     # ./spec/test_07.rb:23:in `block (3 levels) in <top (required)>'
-
-Finished in 0.01163 seconds (files took 0.22834 seconds to load)
-2 examples, 2 failures
-
-Failed examples:
-
-rspec ./spec/test_07.rb:13 # Footman#attack! should do deal 10 (AP) damage to the enemy unit
-rspec ./spec/test_07.rb:21 # Footman#damage should reduce the unit's health_points by the attack_power specified
-vagrant [warcraft3]> bundle exec rspec spec/test_07.rb
 
 Footman
   #attack!
@@ -349,60 +37,9 @@ Footman
   #damage
     should reduce the unit's health_points by the attack_power specified
 
-Finished in 0.01145 seconds (files took 0.23347 seconds to load)
-2 examples, 0 failures
-vagrant [warcraft3]> bundle exec rspec spec/test_08.rb
-/vagrant/warcraft3/lib/peasant.rb:1:in `<top (required)>': undefined local variable or method `peasant' for main:Object (NameError)
-	from /vagrant/warcraft3/spec/spec_helper.rb:8:in `require_relative'
-	from /vagrant/warcraft3/spec/spec_helper.rb:8:in `safely_require'
-	from /vagrant/warcraft3/spec/spec_helper.rb:16:in `<top (required)>'
-	from /vagrant/warcraft3/spec/test_08.rb:1:in `require_relative'
-	from /vagrant/warcraft3/spec/test_08.rb:1:in `<top (required)>'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `load'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `block in load_spec_files'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `each'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `load_spec_files'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:96:in `setup'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:84:in `run'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:69:in `run'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:37:in `invoke'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/exe/rspec:4:in `<top (required)>'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/rspec:23:in `load'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/rspec:23:in `<main>'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `eval'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `<main>'
-vagrant [warcraft3]> bundle exec rspec spec/test_08.rb
-/vagrant/warcraft3/spec/test_08.rb:7:in `<top (required)>': uninitialized constant Peasant (NameError)
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `load'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `block in load_spec_files'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `each'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/configuration.rb:1105:in `load_spec_files'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:96:in `setup'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:84:in `run'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:69:in `run'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/lib/rspec/core/runner.rb:37:in `invoke'
-	from /usr/local/rvm/gems/ruby-2.3.0/gems/rspec-core-3.1.2/exe/rspec:4:in `<top (required)>'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/rspec:23:in `load'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/rspec:23:in `<main>'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `eval'
-	from /usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `<main>'
-vagrant [warcraft3]> bundle exec rspec spec/test_08.rb
-
 Peasant
   has and knows its HP, which is lower than that of a Footman
   can't damage other units (no attack power)
-
-Finished in 0.00441 seconds (files took 0.23161 seconds to load)
-2 examples, 0 failures
-vagrant [warcraft3]> bundle exec rspec spec/test_08.rb
-
-Peasant
-  has and knows its HP, which is lower than that of a Footman
-  can't damage other units (no attack power)
-
-Finished in 0.00502 seconds (files took 0.23279 seconds to load)
-2 examples, 0 failures
-vagrant [warcraft3]> bundle exec rspec spec/test_09.rb
 
 Barracks
   #train_peasant
@@ -417,86 +54,11 @@ Barracks
     does not train a peasant if there aren't enough resources
     trains a peasant if there are enough resources
 
-Finished in 0.0212 seconds (files took 0.24074 seconds to load)
-8 examples, 0 failures
-vagrant [warcraft3]> bundle exec rspec spec/test_10.rb
-
-Unit
-  #damage
-    should reduce the unit's health_points by the attack_power specified
-  #attack!
-    should deal the appropriate (attack power based) damage to the enemy unit (FAILED - 1)
-
-Failures:
-
-  1) Unit#attack! should deal the appropriate (attack power based) damage to the enemy unit
-     Failure/Error: @unit.attack!(enemy_unit)
-     NoMethodError:
-       undefined method `attack!' for #<Unit:0x9be09fc @health_points=100, @attack_power=3>
-       Did you mean?  attack_power
-     # ./spec/test_10.rb:25:in `block (3 levels) in <top (required)>'
-
-Finished in 0.01125 seconds (files took 0.235 seconds to load)
-2 examples, 1 failure
-
-Failed examples:
-
-rspec ./spec/test_10.rb:22 # Unit#attack! should deal the appropriate (attack power based) damage to the enemy unit
-vagrant [warcraft3]> bundle exec rspec spec/test_10.rb
-
-Unit
-  #damage
-    should reduce the unit's health_points by the attack_power specified
-  #attack!
-    should deal the appropriate (attack power based) damage to the enemy unit (FAILED - 1)
-
-Failures:
-
-  1) Unit#attack! should deal the appropriate (attack power based) damage to the enemy unit
-     Failure/Error: @unit.attack!(enemy_unit)
-       #<Unit:0x986ff98> received :damage with unexpected arguments
-         expected: (3)
-              got: (20)
-     # ./lib/unit.rb:15:in `attack!'
-     # ./spec/test_10.rb:25:in `block (3 levels) in <top (required)>'
-
-Finished in 0.01177 seconds (files took 0.23457 seconds to load)
-2 examples, 1 failure
-
-Failed examples:
-
-rspec ./spec/test_10.rb:22 # Unit#attack! should deal the appropriate (attack power based) damage to the enemy unit
-vagrant [warcraft3]> bundle exec rspec spec/test_10.rb
-
-Unit
-  #damage
-    should reduce the unit's health_points by the attack_power specified
-  #attack!
-    should deal the appropriate (attack power based) damage to the enemy unit (FAILED - 1)
-
-Failures:
-
-  1) Unit#attack! should deal the appropriate (attack power based) damage to the enemy unit
-     Failure/Error: @unit.attack!(enemy_unit)
-       #<Unit:0x9630520> received :damage with unexpected arguments
-         expected: (3)
-              got: (2)
-     # ./lib/unit.rb:15:in `attack!'
-     # ./spec/test_10.rb:25:in `block (3 levels) in <top (required)>'
-
-Finished in 0.01134 seconds (files took 0.23517 seconds to load)
-2 examples, 1 failure
-
-Failed examples:
-
-rspec ./spec/test_10.rb:22 # Unit#attack! should deal the appropriate (attack power based) damage to the enemy unit
-vagrant [warcraft3]> bundle exec rspec spec/test_10.rb
-
 Unit
   #damage
     should reduce the unit's health_points by the attack_power specified
   #attack!
     should deal the appropriate (attack power based) damage to the enemy unit
 
-Finished in 0.01119 seconds (files took 0.22985 seconds to load)
-2 examples, 0 failures
+Finished in 0.0565 seconds (files took 0.27221 seconds to load)
+30 examples, 0 failures
