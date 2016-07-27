@@ -5,16 +5,17 @@ require_relative 'spec_helper'
 
 # Part 1
 
+# Define a method #dead? on the Unit class. We add it to Unit instead of Footman because all Units can die, not just Footmans or Peasants.
 
 # Part 2
 
 # A dead Unit cannot attack another Unit. Conversely, a living Unit will also not attack another Unit that is already dead.
 
-# describe Unit do 
+describe Unit do 
 
   
 
-  describe "dead?" do
+  describe "Footman dead?" do
 
     it "returns false if the unit has health points left" do
       unit = Unit.new(25,25)
