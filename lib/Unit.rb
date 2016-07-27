@@ -7,11 +7,11 @@ class Unit
     @attack_power = attack_power
   end
 
-  def damage(unit)
-    @health_points -= unit
+  def damage(wound_size)
+    @health_points -= wound_size
   end
-
+    
   def attack!(enemy_unit)
-    enemy_unit.damage(3)
+    enemy_unit.damage(self.attack_power)
   end
 end

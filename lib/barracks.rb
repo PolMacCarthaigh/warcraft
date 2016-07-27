@@ -1,9 +1,11 @@
-class Barracks
-attr_reader :food, :gold
+class Barracks < Unit
+
+  attr_reader :food, :gold, :health_points
 
   def initialize
     @gold = 1000
     @food = 80
+    @health_points = 500
   end
 
   def can_train_footman?
