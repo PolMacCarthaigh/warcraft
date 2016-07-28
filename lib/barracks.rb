@@ -1,44 +1,67 @@
-class Barracks < Unit
+require_relative 'footman'
 
-  attr_reader :food, :gold, :health_points
+class Barracks
+
+  attr_accessor :gold, :food, :lumber, :health_points
+  attr_reader 
 
   def initialize
     @gold = 1000
     @food = 80
+    @lumber = 500
     @health_points = 500
   end
 
   def can_train_footman?
-    food >= 2 && gold >= 135
+    true if gold >= 135 && food >=2
   end
 
   def train_footman
-   if can_train_footman?
-    @gold -= 135
-    @food -= 2
-    Footman.new
+    if can_train_footman?
+      self.gold -= 135
+      self.food -= 2
+      Footman.new
     else
       nil
     end
   end
 
-  def train_peasant
-    @gold -= 90
-    @food -= 5
-    Peasant.new
-  end
-
   def can_train_peasant?
-    food > 5 && gold > 90 
+    true if gold >= 90 && food >= 5
   end
 
   def train_peasant
     if can_train_peasant?
-      @gold -= 90
-      @food -= 5
+      self.gold -= 90
+      self.food -= 5
       Peasant.new
     else
       nil
     end
   end
+
+  def damage(amount)
+    @health_points -= amount
+  end
+
+  
+
+  def build_seige_engine
+    if can_build_seige_engine?
+     @gold -= 200
+     @lumber -= 60
+     @food -= 3
+      SeigeEngine.new
+    else
+      nil
+    end
+
+    def can_build_seige_engine?
+    true if
+    @gold >= 200
+    @lumber >= 60
+    @food >=3 
+  end
+  end
+
 end

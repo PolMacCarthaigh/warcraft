@@ -5,25 +5,24 @@ require 'spec_helper'
   describe Barracks do
     before :each do
     @barracks = Barracks.new
-    @footman = Footman.new
   end
 
   #Barracks 500hp 
-  it "has 500 hp" do
-    expect(@barracks.health_points).to eq(500)
-  end
+    it "has 500 hp" do
+      expect(@barracks.health_points).to eq(500)
+    end
 
-  it "can take damage" do
-    @barracks.damage(5)
-    expect(@barracks.health_points).to eq(495) 
-  end
+    it "can take damage" do
+      @barracks.damage(5)
+      expect(@barracks.health_points).to eq(495) 
+    end
 
   #Damage buildings
   describe "footman" do
     it "Footman damage buildings by 1/2" do
       @barracks.damage(5)
       expect(@barracks.health_points).to eq(495) 
-  end
+    end
   end
   
 
