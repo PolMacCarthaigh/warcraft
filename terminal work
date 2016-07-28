@@ -1,3 +1,5 @@
+vagrant [warcraft3 (master)⚡]> bundle exec rspec spec/test*.rb
+
 Footman
   has and knows its HP (health points)
   has and knows its AP (attack power)
@@ -60,5 +62,21 @@ Unit
   #attack!
     should deal the appropriate (attack power based) damage to the enemy unit
 
-Finished in 0.0565 seconds (files took 0.27221 seconds to load)
-30 examples, 0 failures
+Barracks
+  has 500 hp
+  can take damage
+  footman
+    Footman damage buildings by 1/2
+
+Unit
+  Footman dead?
+    returns false if the unit has health points left
+    returns true if the unit has no health points left
+
+Unit
+  #attack!
+    does not allow a dead unit to attack an enemy
+    does not allow a unit to attack a dead enemy
+
+Finished in 0.07156 seconds (files took 0.27519 seconds to load)
+37 examples, 0 failures
